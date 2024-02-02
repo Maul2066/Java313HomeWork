@@ -1,3 +1,5 @@
+package HomeWorks;
+
 import java.util.Scanner;
 public class HomeWork20 {
     public static void main(String[] args) {
@@ -12,7 +14,6 @@ public class HomeWork20 {
             } else if ((i & 1) == 1) {
                 str1.append("0 ");
             }
-
         }
         str2 = String.valueOf(str1);
         String First_change = str2.replace("X", "0");
