@@ -9,10 +9,10 @@ public abstract class Figure {
         Radius = radius;
         Height = height;
     }
+
     public Figure(double radius) {
         Radius = radius;
     }
-
 
     public abstract double throw_result();
     public abstract void Volume ();

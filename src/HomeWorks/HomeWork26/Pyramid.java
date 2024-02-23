@@ -1,5 +1,4 @@
 package HomeWorks.HomeWork26;
-
 public class Pyramid extends Figure{
     public Pyramid(double height, double square) {
         super(height, height);

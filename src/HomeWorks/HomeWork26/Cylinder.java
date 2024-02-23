@@ -1,7 +1,6 @@
 package HomeWorks.HomeWork26;
 
 public class Cylinder extends Figure{
-
     public Cylinder(double radius, double height) {
         super(radius, height);
     }
