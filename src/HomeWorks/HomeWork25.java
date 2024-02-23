@@ -12,7 +12,7 @@ public class HomeWork25 {
     }
 }
 class Figure {
-    
+
     int side1;
     int side2;
 
