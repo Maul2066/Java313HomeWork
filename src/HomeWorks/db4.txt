@@ -1,0 +1,87 @@
+ID - код по магазину
+
+Produce - название продукта
+
+Material – материал
+
+Color – цвет
+
+Size – размер
+
+Country - страна производитель
+
+ID_salespeople - код поставщика товара
+
+Price - цена за штуку
+
+Count - количество штук
+
+REM - ремарки
+
+========================================================================
+
+5. Вставьте строку NTC-117BK Micro Camera Case, нейлон, ч, 13,3x8,3x5,7, 2016, Беларусь, 1046
+
+USE db4;
+
+INSERT INTO ware (Produce, Material, Color, Size, Country, ID_salespeople, Price, REM)
+VALUES('NTC-117BK','нейлон','ч', '13,3x8,3x5,7,','Беларусь','2016', '1046', 'Micro Camera Case')
+
+6. Вставьте строку POC-463BK Compact Camera Case, полиэстер, ч, 11x7x4,5, Беларусь, остальные данные не определены.
+
+USE db4;
+
+INSERT INTO ware (Produce, Material, Color, Size, Country, ID_salespeople, Price, Count, REM)
+VALUES('POC-463BK', 'полиэстер', 'ч', '11x7x4,5', 'Беларусь', NULL, NULL, NULL, 'Compact Camera Case')
+
+7. Написать запрос, который заменит код поставщика на 2000, если на складе хранится товара менее чем на 500 руб. По данному поставщику.
+
+USE db4;
+
+UPDATE ware
+SET ID_salespeople = 2000
+WHERE Price <= 500
+
+8. Замените материал нейлон на брезент, если сумка стоит менее 200 руб.
+
+USE db4;
+
+UPDATE ware
+SET Material = 'брезент'
+WHERE REM REGEXP 'Bag' AND Material = 'Нейлон' AND Price <= 200
+
+9. Напишите запрос, который покажет все кожаные сумки черного цвета китайского производства.
+
+USE db4;
+SELECT REM, Material, Color, Country
+FROM ware
+WHERE REM REGEXP 'Bag' AND Material = 'кожа' AND Color = 'ч' AND Country = 'Китай'
+
+10. Напишите запрос, который покажет все сумки с размером более 15 дюймов.
+
+SELECT REM FROM db4.ware
+WHERE REM REGEXP 'Bag' AND SIZE = '36,8x29,2x5,1'
+
+11. Напишите запрос, который покажет всех поставщиков сумок не черного цвета.
+
+USE db4;
+
+SELECT ID_salespeople, REM, Color
+FROM ware
+WHERE REM REGEXP 'Bag' AND Color != 'ч' AND Color != 'ч-серый'
+
+12. Замените материал полиэстер у сумок китайского производства на нейлон
+
+USE db4;
+
+UPDATE ware
+SET Material = 'нейлон'
+WHERE REM REGEXP 'Bag' AND Country = 'Китай' AND Material = 'полиэстер'
+
+13. В записях с кодом товара: 1015, 1041, 1032, 1010 материал нейлон заменить на полиэстер если страна-производитель Китай.
+
+USE db4;
+
+UPDATE ware
+SET Material = 'полиэстер'
+WHERE Country = 'Китай' AND Material = 'нейлон' AND ID = 1015 OR Country = 'Китай' AND Material = 'нейлон' AND ID = 1041 OR Country = 'Китай' AND Material = 'нейлон' AND ID = 1032 OR Country = 'Китай' AND Material = 'нейлон' AND ID = 1010

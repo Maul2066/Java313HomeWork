@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Pr_1`()
+BEGIN
+    SET @SUM = 0;
+    SET @COUNT = 0;
+    WHILE @COUNT <= 10 DO
+	SET @SUM = @SUM + @COUNT;
+        SET @COUNT = @COUNT + 1;
+        SELECT @SUM AS "Сумма чисел от 1 до 10";
+	END WHILE;
+END

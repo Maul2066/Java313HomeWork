@@ -1,0 +1,105 @@
+2.	Студенты какой кафедры и факультета сдавали социологию.
+
+USE db_9;
+
+SELECT ID_ST, Predmet
+FROM exzamen
+WHERE Predmet REGEXP 'Социология'
+
+5.	Вывести номера зачеток только студентов физико-технического факультета.
+
+USE db_9;
+
+SELECT N_Z, Decanat
+FROM zachetki, kafedra
+WHERE Decanat = "Физико-технический"
+
+6.	Подсчитать сколько различных предметов сдавалось в сессию.
+
+USE db_9;
+
+SELECT COUNT(data) AS "Кол-во предметов за сессию"
+FROM exzamen
+
+7.	Напишите запрос, который выводит средний балл по экзаменам Васильевой.
+
+USE db_9;
+
+SELECT AVG(Ball) AS "Средний балл"
+FROM exzamen, student
+WHERE FIO REGEXP 'Васильева'
+
+8.	Определите сколько человек учится на каждой специальности.
+
+USE db_9;
+
+SELECT Special,COUNT(FIO)
+FROM student
+GROUP BY Special;
+
+9.	Напишите запрос, который покажет все группы физико-технического факультета.
+
+USE db_9;
+
+SELECT Student.Group, Decanat
+FROM student, kafedra
+WHERE Decanat REGEXP 'Физико-технический'
+
+10.	Вывести список фамилий студентов получивших 5 баллов по дифференциальным уравнениям.
+
+USE db_9;
+
+SELECT FIO, Predmet, Ball
+FROM student, exzamen
+WHERE Predmet REGEXP 'Дифференциальные уравнения' AND Ball = 5
+
+11.	Напишите запрос, который покажет,  сколько экзаменов  сдавал Шутов.
+
+USE db_9;
+
+SELECT FIO, COUNT(Predmet)
+FROM Exzamen, Student
+WHERE FIO REGEXP 'Шутов'
+GROUP BY FIO;
+
+12.	Выведите название кафедры студентов, не сдавших хотя бы один экзамен.
+
+USE db_9;
+
+SELECT Kafedra, COUNT(FIO)
+FROM Kafedra, exzamen, Student
+WHERE Ball IS NULL
+GROUP BY Kafedra;
+
+13.	Подсчитать количество кафедр на каждом факультете.
+
+USE db_9;
+
+SELECT Decanat, COUNT(Kafedra)
+FROM Kafedra
+GROUP BY Decanat;
+
+14.	Подсчитать количество пятерок на физико-математическом факультете.
+
+USE db_9;
+
+SELECT Decanat, COUNT(Ball)
+FROM Exzamen, Kafedra
+WHERE Decanat REGEXP 'Физико-математический' AND Ball = 5
+GROUP BY Decanat;
+
+15.	Определите номера зачетных книжек группы ФТ151
+
+USE db_9;
+
+SELECT Student.Group, N_Z
+FROM Student, zachetki
+WHERE Student.Group REGEXP 'ФТ151'
+
+16.	Выведите перечень специальностей физико-математического факультета.
+
+USE db_9;
+
+SELECT Decanat, Special
+FROM Kafedra, Student
+WHERE Decanat REGEXP 'Физико-математический'
