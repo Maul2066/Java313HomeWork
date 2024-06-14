@@ -1,0 +1,19 @@
+.table-div{
+    border: solid;
+    border-color: rgba(172, 215, 234, 0.842);
+}
+
+.img-gmail{
+    float: right;
+}
+
+.Question{
+    width: 300px;
+}
+.GPS{
+    width: 1230px;
+}
+.agree-button{
+    width: 1000px;
+    margin: 1px 100px;
+}
