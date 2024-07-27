@@ -1,0 +1,25 @@
+.style_class{
+    border: solid;
+    height: 200px;
+    width: 260px;
+    border-color: black;
+    text-align: center;
+}
+img{
+    margin-top: 10px;
+    padding: 20px
+}
+.margin_class{
+    margin-left: 250px;
+}
+.margin_class1{
+    margin-left: 600px;
+    margin-top: -206px;
+}
+.margin_class2{
+    margin-left: 950px;
+    margin-top: -206px;
+}
+.general_div{
+    margin-top: 40px;
+}
