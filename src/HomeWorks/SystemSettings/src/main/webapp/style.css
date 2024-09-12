@@ -1,0 +1,20 @@
+body{
+    background: linear-gradient(90deg, #2d2c2c 0%, #726d6d 100%);
+}
+
+.container{
+    margin-top: 180px;
+    margin-left: 600px;
+    border: 1px solid;
+    width: 400px;
+    background: linear-gradient(30deg, #1a1a1a 0%, #1f1d1d 100%);
+    border-radius: 10px;
+}
+
+.container1{
+    margin-left: 30px;
+}
+
+p{
+    color: red;
+}
