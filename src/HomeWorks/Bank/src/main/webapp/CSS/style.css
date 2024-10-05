@@ -1,0 +1,39 @@
+body{
+    background: linear-gradient(90deg, #2d2c2c 0%, #726d6d 100%);
+}
+.User_Register_JAVA_CLASS_FILE{
+    background-color: black;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin-left: 550px;
+    border: solid white;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+.User_Register_JAVA_CLASS_FILE_H2{
+    color: white;
+    margin-top: 70px;
+}
+
+.User_Register_JAVA_CLASS_FILE_DIV_HREF{
+    background: linear-gradient(0deg, #f81717 0%, #501313 100%);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border: solid gray 3px;
+}
+.User_Register_JAVA_CLASS_FILE_HREF{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.User_Register_JAVA_CLASS_FILE_HREF:hover{
+    color: black;
+    background-color: red;
+}
+
+/*  Ошибка: Новые данные в этом файле не сохраняются.
+    Причина: Неизвестно.
+    Причина возникновение: Неизвестно. Появляется спустя определенное время.
+    Решение: Применить css другим способом.*/
