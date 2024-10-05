@@ -14,6 +14,7 @@
     <h2 style="color: #b02424; margin-left: 20px; background-color: #2d2c2c;">Пользователи</h2>
     <h2 style="color: #b02424; margin-left: 20px; background-color: #2d2c2c;">Работники</h2>
     <h2 style="color: #b02424; margin-left: 20px; background-color: #2d2c2c;">Регистрация персонала</h2>
+    <h2 style="color: #b02424; margin-left: 20px; background-color: #2d2c2c;">Просмотр заявок</h2>
 </div>
 
 

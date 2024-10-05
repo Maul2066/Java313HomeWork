@@ -27,6 +27,8 @@ public class ButtonsAdmin extends HttpServlet {
                 resp.sendRedirect("CustomizeWorkers");
             } else if ("Регистрация персонала".equals(name)) {
                 resp.sendRedirect("registerWorker.jsp");
+            } else if ("Просмотр заявок".equals(name)) {
+                resp.sendRedirect("Qcheck.jsp");
             } else {
                 resp.sendRedirect("AdminP.jsp");
             }

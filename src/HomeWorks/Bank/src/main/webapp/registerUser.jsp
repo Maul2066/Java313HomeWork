@@ -15,7 +15,7 @@
     <div style="margin-left: 100px; font-size: 20px; color: white; margin-top: 70px;">ФИО:</div>
     <input type="text" class="" name="fullname" id="" style="margin-left: 100px; font-size: 20px; background-color: red; color: white; border: solid white 2px;" required> <br><br>
     <div style="margin-left: 100px; font-size: 20px; color: white;">Эл.почта:</div>
-    <input type="email" class="" name="email" id=""  style="margin-left: 100px; font-size: 20px; background-color: red; color: white; border: solid white 2px;" required> <br>
+    <input type="email" class="" name="email" id=""  style="margin-left: 100px; font-size: 20px; background-color: red; color: white; border: solid white 2px;" value="User" required> <br>
         <br>
         <div style="margin-left: 100px; font-size: 20px; color: white;">Пароль:</div>
         <input type="password" class="" name="password" id="" style="margin-left: 100px; font-size: 20px; background-color: red; color: white; border: solid white 2px;" required> <br>
