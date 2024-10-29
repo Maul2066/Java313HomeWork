@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>...</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each = "user : ${users}">
+        <td th:text="${user.name}">Имя</td>
+        <td th:text="${user.email}"></td>
+        <td th:text = "${user.pass}"></td>
+        <td th:text="${user.role}"></td>
+        <td>
+            <a th:href="@{/update}" th:if="${user.role} == 'Very Important Person'">Update</a>
+            <a th:href="@{/home}" th:unless="${user.role} == 'Humanoid'">home</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
