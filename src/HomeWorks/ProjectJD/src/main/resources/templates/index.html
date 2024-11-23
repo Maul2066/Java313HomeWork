@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image:
+              linear-gradient(0deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, #1a1a1a 0%, #343434 100%);
+      background-size: 5px 5px;
+      overflow: hidden;
+      font-family: 'Orbitron', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+document.write("<div style='color: red; font-size: 100px; text-shadow: 0 0 0 #700000, 0 0 10px #ff0000; text-align: center; margin-top: 200px;'>Loading</div>");
+document.write("<br> <div style='width: 600px; height: 100px; border: #343434 solid 10px; margin-left: 460px; background-color: black'>");
+document.write("<div style='width: 10px; height: 100px; background-color: red; box-shadow:0 0 0 #700000, 0 0 10px #ff0000;' id='Div_Load_ID'></div>")
+document.write("</div>");
+const div = document.getElementById('Div_Load_ID');
+setTimeout(() => {
+    div.style.width = '20px';
+}, 1000);
+setTimeout(() => {
+    div.style.width = '50px';
+}, 2000);
+setTimeout(() => {
+    div.style.width = '80px';
+}, 3000);
+setTimeout(() => {
+    div.style.width = '100px';
+}, 4000);
+setTimeout(() => {
+    div.style.width = '200px';
+}, 5000);
+setTimeout(() => {
+    div.style.width = '350px';
+}, 6000);
+setTimeout(() => {
+    div.style.width = '500px';
+}, 7000);
+setTimeout(() => {
+    div.style.width = '600px';
+}, 8000);
+setTimeout(() => {
+    window.location = "home";
+}, 9000);
+</script>
+</body>
+</html>
